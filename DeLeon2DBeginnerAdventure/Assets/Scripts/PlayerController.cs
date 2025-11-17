@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+//QualitySettings.vSyncCount = 0;
+//Application.targetFrameRate = 10;
 
 
 public class PlayerControllerTutorialUpdates : MonoBehaviour
@@ -51,7 +53,7 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         transform.position = position;
         Vector2 move = MoveAction.ReadValue<Vector2>();
         Debug.Log(move);
-        Vector2 postition = (Vector2)transform.position + move * 0.1f;
+        Vector2 vector2 = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
         transform.position = position;
     }
 
